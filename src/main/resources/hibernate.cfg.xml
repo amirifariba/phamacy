@@ -11,7 +11,7 @@
 
   
    <property name="hibernate.connection.url">
-      jdbc:mysql://127.0.0.1/phamacymanagement
+      jdbc:mysql://127.0.0.1/phamacysystem
    </property>
    <property name="hibernate.connection.username">
       root
