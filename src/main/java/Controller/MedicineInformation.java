@@ -8,11 +8,11 @@ public class MedicineInformation {
 	@Id
 	@GeneratedValue
 	@Column(name = "MedicineInformationId")
-	int medicineInformationId;
+	private int medicineInformationId;
 	@Column(name = "MedicineName")
-	String medicineName;
-	@Column(name = "Exist")
-	boolean exist;
+	private String medicineName;
+	@Column(name = "Exist" )
+	private boolean exist;
 
 	public int getMedicineInformationId() {
 		return medicineInformationId;
@@ -38,13 +38,18 @@ public class MedicineInformation {
 		this.exist = exist;
 	}
 
-	public MedicineInformation(int medicineInformationId, String medicineName, boolean exist) {
-		super();
-		this.medicineInformationId = medicineInformationId;
+	public void copyMedicineInformation(MedicineInformation mdcn) {
+		this.medicineInformationId = mdcn.medicineInformationId;
+		this.medicineName = mdcn.medicineName;
+		this.exist = mdcn.exist;
+	}
+
+	public MedicineInformation(String medicineName, boolean exist) {
 		this.medicineName = medicineName;
 		this.exist = exist;
 	}
 
 	public MedicineInformation() {
 	}
+
 }
